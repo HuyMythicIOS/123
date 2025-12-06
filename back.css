@@ -1,0 +1,117 @@
+/* back.css — style cho trang chủ + ảnh sách */
+:root{
+  --accent: #2b7aee;
+  --muted: #666;
+  --maxw: 1100px;
+  --bg: #f7f9fc;
+}
+
+/* Reset nhỏ */
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background: var(--bg);
+  color:#222;
+  line-height:1.5;
+}
+
+/* Header / Menu */
+.top-header{
+  background:#fff;
+  border-bottom:1px solid #e6e9ef;
+  position:sticky;
+  top:0;
+  z-index:30;
+}
+.menu-nav{
+  max-width:var(--maxw);
+  margin:0 auto;
+  display:flex;
+  gap:14px;
+  list-style:none;
+  padding:12px 16px;
+  align-items:center;
+}
+.menu-nav .menu-item a{
+  text-decoration:none;
+  color:#333;
+  font-weight:600;
+  padding:8px 10px;
+  border-radius:6px;
+}
+.menu-nav .menu-item a:hover{
+  background: rgba(43,122,238,0.08);
+  color: var(--accent);
+}
+
+/* Hero / Banner */
+.hero{
+  max-width:var(--maxw);
+  margin:20px auto;
+  padding:0 16px;
+}
+.hero-img{
+  width:100%;
+  height:320px;
+  object-fit:cover;
+  border-radius:10px;
+  box-shadow:0 8px 28px rgba(18,38,63,0.06);
+  display:block;
+}
+
+/* Section container */
+.container{
+  max-width:var(--maxw);
+  margin:20px auto;
+  padding:0 16px 30px;
+}
+
+/* Section title */
+.section-title{
+  margin:0 0 12px 0;
+  font-size:20px;
+  color:#222;
+  font-weight:700;
+}
+
+/* Book list (3 cards) */
+.book-list{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:16px;
+}
+.book-card{
+  background:#fff;
+  border-radius:10px;
+  padding:12px;
+  box-shadow:0 6px 18px rgba(18,38,63,0.06);
+  text-align:center;
+}
+.book-img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+  border-radius:8px;
+  margin-bottom:10px;
+}
+.book-title{
+  margin:6px 0 4px;
+  font-size:16px;
+  font-weight:700;
+}
+.book-desc{
+  margin:0;
+  color:var(--muted);
+  font-size:14px;
+}
+
+/* Responsive */
+@media (max-width:900px){
+  .book-list{ grid-template-columns:repeat(2, 1fr); }
+}
+@media (max-width:600px){
+  .menu-nav{ overflow:auto; gap:10px; padding:10px; }
+  .hero-img{ height:180px; }
+  .book-list{ grid-template-columns:1fr; gap:12px; }
+}

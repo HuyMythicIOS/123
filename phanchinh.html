@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shop Sách nhóm 3</title>
+  <link rel="stylesheet" href="back.css">
+</head>
+<body>
+  <header class="top-header">
+    <ul class="menu-nav">
+      <li class="menu-item"><a href="phanchinh.html">TRANG CHỦ</a></li>
+      <li class="menu-item"><a href="#">SẢN PHẨM</a></li>
+      <li class="menu-item"><a href="#">GIỎ HÀNG</a></li>
+      <li class="menu-item"><a href="#">HỖ TRỢ</a></li>
+      <li class="menu-item"><a href="admin.html" class="">ADMIN</a></li>
+      <li class="menu-item">
+        <span id="userName" style="color: #4a90e2; font-weight: 700;"></span>
+      </li>
+      <li class="menu-item">
+        <a href="#" onclick="logout(); return false;" style="color: #dc3545;">ĐĂNG XUẤT</a>
+      </li>
+    </ul>
+  </header>
+
+  <!-- ảnh chính -->
+  <section class="hero">
+    <img class="hero-img" src=""C:\Users\ADMIN\Downloads\lionel-messi-tuyen-bo-gay-soc-ve-kha-nang-tham-du-world-cup-2026-1757076306248.webp"" alt="Banner giới thiệu" />
+  </section>
+
+  <!-- 3 ảnh sách -->
+  <section class="container">
+    <h2 class="section-title">Sách nổi bật</h2>
+    <div class="book-list">
+      <article class="book-card">
+        <a href="sach1.html">
+        <img src="c:\Users\ADMIN\Downloads\aadf7c0a6456eb08b247.jpg" alt="Sách 1" class="book-img" />
+        <h3 class="book-title">Tựa sách 1</h3>
+        <p class="book-desc">Mô tả ngắn sách 1.</p>
+        </a>
+      </article>
+
+      <article class="book-card">
+        <a href="sach2.html">
+        <img src="images/book2.jpg" alt="Sách 2" class="book-img" />
+        <h3 class="book-title">Tựa sách 2</h3>
+        <p class="book-desc">Mô tả ngắn sách 2.</p>
+        </a>
+      </article>
+
+      <article class="book-card">
+        <a href="sach3.html">
+        <img src="images/book3.jpg" alt="Sách 3" class="book-img" />
+        <h3 class="book-title">Tựa sách 3</h3>
+        <p class="book-desc">Mô tả ngắn sách 3.</p>
+        </a>
+      </article>
+    </div>
+  </section>
+
+  <main style="padding:20px; text-align:center;">
+    <p>Cảm Ơn Quý Khách</p>
+  </main>
+
+  <script src="dangnhapdangky.js"></script>
+  <script>
+    //  Kiểm tra đăng nhập khi tải trang
+    window.addEventListener('DOMContentLoaded', function() {
+      const currentUser = checkLogin();
+      if (currentUser) {
+        // Hiển thị tên người dùng
+        document.getElementById('userName').textContent = '👤 ' + (currentUser.fullname || currentUser.username);
+      }
+    });
+  </script>
+</body>
+</html>

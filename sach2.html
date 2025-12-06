@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sách 1 - Chi tiết</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .book-container {
+            max-width: 600px;
+            margin: auto;
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 10px;
+            background: #fafafa;
+        }
+
+        .book-img {
+            width: 100%;
+            border-radius: 6px;
+        }
+
+        .rating {
+            display: flex;
+            gap: 5px;
+            font-size: 30px;
+            cursor: pointer;
+            margin: 10px 0;
+        }
+
+        .star {
+            color: #ccc;
+        }
+
+        .star.active {
+            color: gold;
+        }
+
+        .info-box {
+            background: #eee;
+            padding: 10px;
+            border-radius: 6px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="book-container">
+        <h2>Tựa Sách 1</h2>
+
+        <!-- Ảnh -->
+        <img src="c:\Users\ADMIN\Downloads\aadf7c0a6456eb08b247.jpg" alt="Sách 2" class="book-img">
+
+        <!-- Mô tả -->
+        <p>
+            Đây là nội dung chi tiết của sách 1.  
+            Bạn có thể thêm mô tả dài tùy ý, ví dụ: nội dung, tác giả, thông điệp, hoặc đoạn giới thiệu hấp dẫn.
+        </p>
+
+        <!-- Người đăng -->
+        <div class="info-box">
+            <strong>Người đăng:</strong> Admin nhóm 3 <br>
+            <strong>Ngày đăng:</strong> 05/12/2024
+        </div>
+
+        <h3>Đánh giá sách</h3>
+
+        <!-- :star::star: HỆ THỐNG ĐÁNH GIÁ 1–5 SAO :star::star: -->
+        <div class="rating" id="ratingBox">
+            <span class="star" data-value="1">★</span>
+            <span class="star" data-value="2">★</span>
+            <span class="star" data-value="3">★</span>
+            <span class="star" data-value="4">★</span>
+            <span class="star" data-value="5">★</span>
+        </div>
+
+        <p id="ratingResult">Bạn chưa đánh giá.</p>
+    </div>
+
+    <script>
+        // Chọn sao
+        const stars = document.querySelectorAll(".star");
+        const result = document.getElementById("ratingResult");
+
+        stars.forEach(star => {
+            star.addEventListener("click", function () {
+                let value = this.getAttribute("data-value");
+
+                // Reset sao
+                stars.forEach(s => s.classList.remove("active"));
+
+                // Tô màu sao đã chọn
+                for (let i = 0; i < value; i++) {
+                    stars[i].classList.add("active");
+                }
+
+                result.innerText = "Bạn đã đánh giá " + value + " sao.";
+            });
+        });
+    </script>
+
+</body>
+</html>
