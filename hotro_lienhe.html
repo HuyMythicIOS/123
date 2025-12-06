@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liên hệ – BookWorld</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: #f1f5f9;
+        }
+
+        .page-section {
+            padding: 50px 20px;
+        }
+
+        .contact-wrapper {
+            max-width: 1100px;
+            margin: auto;
+            background: #ffffff;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            display: flex;
+            flex-direction: column;
+        }
+
+        @media (min-width: 768px) {
+            .contact-wrapper {
+                flex-direction: row;
+            }
+        }
+
+        .contact-left {
+            flex: 2;
+            background: #0a1f44; /* blue-900 */
+            color: white;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .contact-left h2 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .contact-left p {
+            color: #87b0ff;
+            margin-bottom: 25px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 22px;
+        }
+
+        .contact-info-item {
+            display: flex;
+            align-items: center;
+        }
+
+        .contact-info-item i {
+            font-size: 20px;
+            width: 28px;
+            text-align: center;
+            color: #60a5fa;
+        }
+
+        .contact-info-item span {
+            margin-left: 12px;
+            font-size: 15px;
+        }
+
+        .contact-social {
+            margin-top: 40px;
+            display: flex;
+            gap: 14px;
+        }
+
+        .contact-social a {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: #1e3a8a;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: .25s;
+        }
+
+        .contact-social a:hover {
+            background: #ffffff;
+            color: #0a1f44;
+        }
+
+        .contact-right {
+            flex: 3;
+            padding: 40px;
+        }
+
+        .contact-right label {
+            display: block;
+            font-weight: bold;
+            font-size: 14px;
+            color: #444;
+            margin-bottom: 6px;
+        }
+
+        .contact-right input,
+        .contact-right textarea {
+            width: 100%;
+            padding: 14px;
+            font-size: 14px;
+            border-radius: 10px;
+            border: 1px solid #d1d5db;
+            outline: none;
+            transition: .25s;
+            background: #fff;
+        }
+
+        .contact-right input:focus,
+        .contact-right textarea:focus {
+            border-color: #2563eb;
+            box-shadow: 0 0 0 3px rgba(37,99,235,0.25);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 16px;
+        }
+
+        @media (min-width: 768px) {
+            .contact-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .contact-right button {
+            margin-top: 10px;
+            background: #2563eb;
+            color: white;
+            font-weight: bold;
+            border: none;
+            padding: 14px 28px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: .25s;
+        }
+
+        .contact-right button:hover {
+            background: #1d4ed8;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<section id="contact" class="page-section">
+    <div class="contact-wrapper">
+        <div class="contact-left">
+            <div>
+                <h2>Liên hệ với chúng tôi</h2>
+                <p>Hãy để lại lời nhắn, chúng tôi sẽ phản hồi trong vòng 24 giờ.</p>
+
+                <div class="contact-info">
+                    <div class="contact-info-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Tầng 12, Tòa nhà Tech, Hà Nội</span>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>1900 1000</span>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>support@bookworld.vn</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-social">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+        </div>
+
+        <div class="contact-right">
+            <form onsubmit="event.preventDefault(); alert('Tin nhắn đã được gửi!');">
+
+                <div class="contact-grid">
+                    <div>
+                        <label>Tên của bạn</label>
+                        <input type="text" required>
+                    </div>
+
+                    <div>
+                        <label>Số điện thoại</label>
+                        <input type="tel" required>
+                    </div>
+                </div>
+
+                <div>
+                    <label>Email</label>
+                    <input type="email" required>
+                </div>
+
+                <div>
+                    <label>Nội dung</label>
+                    <textarea rows="4" required></textarea>
+                </div>
+
+                <button>Gửi tin nhắn</button>
+            </form>
+        </div>
+
+    </div>
+</section>
+
+</body>
+</html>
