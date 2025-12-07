@@ -111,7 +111,7 @@ function login() {
   const user = users.find(u => u.username === username && u.password === password);
   
   if (!user) {
-    alert('❌ Tên đăng nhập hoặc mật khẩu không đúng!\n\nGợi ý: Thử tài khoản admin/admin123');
+    alert('❌ Tên đăng nhập hoặc mật khẩu không đúng!\n\nVui lòng thử lại hoặc đăng kí tài khoản mới!');
     return;
   }
   
