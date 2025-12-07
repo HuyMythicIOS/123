@@ -4,15 +4,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Shop Sách nhóm 3</title>
+
+  <!-- CSS chung -->
   <link rel="stylesheet" href="back.css">
+
+  <!-- Font Awesome (icon footer) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 <body>
   <header class="top-header">
     <ul class="menu-nav">
       <li class="menu-item"><a href="phanchinh.html">TRANG CHỦ</a></li>
       <li class="menu-item"><a href="#">SẢN PHẨM</a></li>
-      <li class="menu-item"><a href="giohang.html">GIỎ HÀNG</a></li>
-      <li class="menu-item"><a href="hotro_lienhe.html">HỖ TRỢ</a></li>
+      <li class="menu-item"><a href="#">GIỎ HÀNG</a></li>
+      <li class="menu-item"><a href="#">HỖ TRỢ</a></li>
       <li class="menu-item"><a href="admin.html" class="">ADMIN</a></li>
       <li class="menu-item">
         <span id="userName" style="color: #4a90e2; font-weight: 700;"></span>
@@ -25,7 +30,8 @@
 
   <!-- ảnh chính -->
   <section class="hero">
-    <img class="hero-img" src=""C:\Users\ADMIN\Downloads\lionel-messi-tuyen-bo-gay-soc-ve-kha-nang-tham-du-world-cup-2026-1757076306248.webp"" alt="Banner giới thiệu" />
+    <!-- sửa src sang images/banner2.jpg khi upload -->
+    <img class="hero-img" src="images/banner2.jpg" alt="Banner giới thiệu" />
   </section>
 
   <!-- 3 ảnh sách -->
@@ -34,25 +40,25 @@
     <div class="book-list">
       <article class="book-card">
         <a href="sach1.html">
-        <img src="c:\Users\ADMIN\Downloads\aadf7c0a6456eb08b247.jpg" alt="Sách 1" class="book-img" />
-        <h3 class="book-title">Tựa sách 1</h3>
-        <p class="book-desc">Mô tả ngắn sách 1.</p>
+          <img src="images/book1.jpg" alt="Sách 1" class="book-img" />
+          <h3 class="book-title">Tựa sách 1</h3>
+          <p class="book-desc">Mô tả ngắn sách 1.</p>
         </a>
       </article>
 
       <article class="book-card">
         <a href="sach2.html">
-        <img src="images/book2.jpg" alt="Sách 2" class="book-img" />
-        <h3 class="book-title">Tựa sách 2</h3>
-        <p class="book-desc">Mô tả ngắn sách 2.</p>
+          <img src="images/book2.jpg" alt="Sách 2" class="book-img" />
+          <h3 class="book-title">Tựa sách 2</h3>
+          <p class="book-desc">Mô tả ngắn sách 2.</p>
         </a>
       </article>
 
       <article class="book-card">
         <a href="sach3.html">
-        <img src="images/book3.jpg" alt="Sách 3" class="book-img" />
-        <h3 class="book-title">Tựa sách 3</h3>
-        <p class="book-desc">Mô tả ngắn sách 3.</p>
+          <img src="images/book3.jpg" alt="Sách 3" class="book-img" />
+          <h3 class="book-title">Tựa sách 3</h3>
+          <p class="book-desc">Mô tả ngắn sách 3.</p>
         </a>
       </article>
     </div>
@@ -62,14 +68,50 @@
     <p>Cảm Ơn Quý Khách</p>
   </main>
 
+  <!-- ====== FOOTER (dán nguyên từ footer.html, đã tinh chỉnh) ====== -->
+  <footer class="footer">
+    <div class="footer-container">
+
+      <div class="footer-col">
+        <div class="footer-brand">
+          <i class="fa-solid fa-book-open-reader icon"></i>
+          <span class="brand-name">BookWorld</span>
+        </div>
+        <p class="footer-text">
+          Nền tảng sách số tiên phong, mang lại trải nghiệm đọc sách hiện đại,
+          tiện lợi và tiết kiệm cho người Việt.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-title">Hỗ trợ khách hàng</h4>
+        <ul class="footer-list">
+          <li><button class="footer-link-btn">Trung tâm trợ giúp</button></li>
+          <li><button class="footer-link-btn">Về chúng tôi</button></li>
+          <li><a href="#" class="footer-link">Điều khoản sử dụng</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-title">Kết nối</h4>
+        <div class="footer-social">
+          <a href="#" class="social-btn" aria-label="facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" class="social-btn" aria-label="instagram"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
   <script src="dangnhapdangky.js"></script>
   <script>
-    //  Kiểm tra đăng nhập khi tải trang
+    //  Kiểm tra đăng nhập khi tải trang (giữ lại logic của bạn)
     window.addEventListener('DOMContentLoaded', function() {
-      const currentUser = checkLogin();
-      if (currentUser) {
-        // Hiển thị tên người dùng
-        document.getElementById('userName').textContent = '👤 ' + (currentUser.fullname || currentUser.username);
+      if (typeof checkLogin === 'function') {
+        const currentUser = checkLogin();
+        if (currentUser) {
+          document.getElementById('userName').textContent = '👤 ' + (currentUser.fullname || currentUser.username);
+        }
       }
     });
   </script>
