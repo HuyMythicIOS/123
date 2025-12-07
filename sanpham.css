@@ -1,0 +1,126 @@
+:root{
+  --maxw: 1100px;
+  --accent: #2b7a78;
+  --muted: #6b6f76;
+  --card-bg: #ffffff;
+  --shadow: 0 6px 18px rgba(16,24,40,0.08);
+  --radius: 10px;
+  font-family: Inter, system-ui;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:#f6f7f9;
+  color:#111;
+  line-height:1.4;
+}
+
+/* 🎯 MENU CỦA BẠN — 100% GIỮ NGUYÊN */
+.top-header{
+  background:#fff;
+  border-bottom:1px solid #e6e9ef;
+  position:sticky;
+  top:0;
+  z-index:30;
+}
+.menu-nav{
+  max-width:var(--maxw);
+  margin:0 auto;
+  display:flex;
+  gap:14px;
+  list-style:none;
+  padding:12px 16px;
+  align-items:center;
+}
+.menu-nav .menu-item a{
+  text-decoration:none;
+  color:#333;
+  font-weight:600;
+  padding:8px 10px;
+  border-radius:6px;
+}
+.menu-nav .menu-item a:hover{
+  background: rgba(43,122,238,0.08);
+  color: var(--accent);
+}
+/* 🎯 HẾT MENU */
+
+.container{
+  max-width:var(--maxw);
+  margin:28px auto;
+  padding:0 16px;
+}
+
+/* Featured section */
+.section-title{
+  margin:0 0 14px 0;
+  font-size:1.25rem;
+  color:var(--accent);
+}
+.featured-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+.book-card{
+  background:#fff;
+  border-radius:var(--radius);
+  overflow:hidden;
+  box-shadow:var(--shadow);
+  transition:.2s;
+}
+.book-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 20px 40px rgba(0,0,0,0.1);
+}
+.book-card img{
+  width:100%;
+  height:300px;
+  object-fit:cover;
+}
+.book-card figcaption{
+  padding:12px;
+}
+
+/* New books */
+.new-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:14px;
+  margin-top:20px;
+}
+.new-card{
+  background:#fff;
+  border-radius:8px;
+  overflow:hidden;
+  box-shadow:var(--shadow);
+}
+.new-card img{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+}
+.new-info{
+  padding:10px;
+  display:flex;
+  justify-content:space-between;
+}
+
+/* Footer */
+.site-footer{
+  text-align:center;
+  padding:20px;
+  color:#777;
+  margin-top:40px;
+  background:#fff;
+}
+
+/* Responsive */
+@media (max-width:900px){
+  .featured-grid{ grid-template-columns:repeat(2,1fr); }
+  .new-grid{ grid-template-columns:repeat(2,1fr); }
+}
+@media (max-width:600px){
+  .featured-grid, .new-grid{ grid-template-columns:1fr; }
+}
