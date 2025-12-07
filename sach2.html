@@ -11,6 +11,37 @@
             padding: 20px;
             line-height: 1.6;
         }
+        
+        .top-header {
+            background:#fff;
+            border-bottom:1px solid #e6e9ef;
+            position:sticky;
+            top:0;
+            z-index:30;
+        }
+        
+        .menu-nav{
+            max-width:var(--maxw);
+            margin:0 auto;
+            display:flex;
+            gap:14px;
+            list-style:none;
+            padding:12px 16px;
+            align-items:center;
+        }
+        
+        .menu-nav .menu-item a{
+            text-decoration:none;
+            color:#333;
+            font-weight:600;
+            padding:8px 10px;
+            border-radius:6px;
+        }
+        
+        .menu-nav .menu-item a:hover{
+            background: rgba(43,122,238,0.08);
+            color: var(--accent);
+        }
 
         .book-container {
             max-width: 600px;
@@ -51,12 +82,21 @@
     </style>
 </head>
 <body>
+  <header class="top-header">
+    <ul class="menu-nav">
+      <li class="menu-item"><a href="phanchinh.html" class="">TRANG CHỦ</a></li>
+      <li class="menu-item"><a href="#" class="">SẢN PHẨM</a></li>
+      <li class="menu-item"><a href="giohang.html">GIỎ HÀNG</a></li>
+      <li class="menu-item"><a href="hotro_lienhe.html">HỖ TRỢ</a></li>
+      <li class="menu-item"><a id="admin-btn" href="admin.html"></a>
+    </ul>
+</header>
 
     <div class="book-container">
         <h2>Tựa Sách 1</h2>
 
         <!-- Ảnh -->
-        <img src="c:\Users\ADMIN\Downloads\aadf7c0a6456eb08b247.jpg" alt="Sách 2" class="book-img">
+        <img src="c:\Users\ADMIN\Downloads\aadf7c0a6456eb08b247.jpg" alt="Sách 1" class="book-img">
 
         <!-- Mô tả -->
         <p>
