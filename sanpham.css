@@ -107,24 +107,6 @@ body{
   justify-content:space-between;
 }
 
-/* Footer */
-.site-footer{
-  text-align:center;
-  padding:20px;
-  color:#777;
-  margin-top:40px;
-  background:#fff;
-}
-
-/* Responsive */
-@media (max-width:900px){
-  .featured-grid{ grid-template-columns:repeat(2,1fr); }
-  .new-grid{ grid-template-columns:repeat(2,1fr); }
-}
-@media (max-width:600px){
-  .featured-grid, .new-grid{ grid-template-columns:1fr; }
-}
-
 /* ==== FOOTER (Thêm/đã chỉnh sửa) ==== */
 /* Phần này có độ ưu tiên cao để tránh bị ghi đè bởi style khác */
 footer.footer,
