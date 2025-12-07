@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Thư Viện Sách — Sản phẩm</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- MENU CỦA BẠN — GIỮ NGUYÊN KHÔNG SỬA -->
+  <header class="top-header">
+      <ul class="menu-nav">
+        <li class="menu-item"><a href="phanchinh.html">TRANG CHỦ</a></li>
+        <li class="menu-item"><a href="#">SẢN PHẨM</a></li>
+        <li class="menu-item"><a href="giohang.html">GIỎ HÀNG</a></li>
+        <li class="menu-item"><a href="hotro_lienhe.html">HỖ TRỢ</a></li>
+        <li class="menu-item"><a href="admin.html" class="">ADMIN</a></li>
+        <li class="menu-item">
+          <span id="userName" style="color: #4a90e2; font-weight: 700;"></span>
+        </li>
+        <li class="menu-item">
+          <a href="#" onclick="logout(); return false;" style="color: #dc3545;">ĐĂNG XUẤT</a>
+        </li>
+      </ul>
+  </header>
+  <!-- HẾT MENU -->
+
+  <main class="container">
+
+    <!-- SÁCH NỔI BẬT -->
+    <section class="featured-section">
+      <h2 class="section-title">Sách nổi bật</h2>
+
+      <div class="featured-grid">
+        <article class="book-card featured">
+          <a href="book-detail-1.html">
+            <figure>
+              <img src="images/featured1.jpg" alt="Sách nổi bật 1">
+              <figcaption>
+                <h3 class="book-title">Tiêu đề sách 1</h3>
+                <p class="book-author">Tác giả A</p>
+                <p class="book-price">₫199.000</p>
+                <p class="book-rating">★★★★☆</p>
+              </figcaption>
+            </figure>
+          </a>
+        </article>
+
+        <article class="book-card featured">
+          <a href="book-detail-2.html">
+            <figure>
+              <img src="images/featured2.jpg" alt="Sách nổi bật 2">
+              <figcaption>
+                <h3 class="book-title">Tiêu đề sách 2</h3>
+                <p class="book-author">Tác giả B</p>
+                <p class="book-price">₫249.000</p>
+                <p class="book-rating">★★★★★</p>
+              </figcaption>
+            </figure>
+          </a>
+        </article>
+
+        <article class="book-card featured">
+          <a href="book-detail-3.html">
+            <figure>
+              <img src="images/featured3.jpg" alt="Sách nổi bật 3">
+              <figcaption>
+                <h3 class="book-title">Tiêu đề sách 3</h3>
+                <p class="book-author">Tác giả C</p>
+                <p class="book-price">₫169.000</p>
+                <p class="book-rating">★★★☆☆</p>
+              </figcaption>
+            </figure>
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <!-- SÁCH MỚI -->
+    <section class="new-section">
+      <h2 class="section-title">Sách mới</h2>
+
+      <div class="new-grid">
+
+        <article class="new-card">
+          <a href="book-new-1.html">
+            <img src="images/new1.jpg" alt="Sách mới 1">
+            <div class="new-info">
+              <strong>Nhật ký nhỏ</strong>
+              <span>₫129.000</span>
+            </div>
+          </a>
+        </article>
+
+        <article class="new-card">
+          <a href="book-new-2.html">
+            <img src="images/new2.jpg" alt="Sách mới 2">
+            <div class="new-info">
+              <strong>Chuyến đi</strong>
+              <span>₫159.000</span>
+            </div>
+          </a>
+        </article>
+
+        <article class="new-card">
+          <a href="book-new-3.html">
+            <img src="images/new3.jpg" alt="Sách mới 3">
+            <div class="new-info">
+              <strong>Kỹ năng sống</strong>
+              <span>₫179.000</span>
+            </div>
+          </a>
+        </article>
+
+        <article class="new-card">
+          <a href="book-new-4.html">
+            <img src="images/new4.jpg" alt="Sách mới 4">
+            <div class="new-info">
+              <strong>Học nhanh</strong>
+              <span>₫139.000</span>
+            </div>
+          </a>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> Thư Viện Sách</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
