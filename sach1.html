@@ -11,6 +11,37 @@
             padding: 20px;
             line-height: 1.6;
         }
+        
+        .top-header {
+            background:#fff;
+            border-bottom:1px solid #e6e9ef;
+            position:sticky;
+            top:0;
+            z-index:30;
+        }
+        
+        .menu-nav{
+            max-width:var(--maxw);
+            margin:0 auto;
+            display:flex;
+            gap:14px;
+            list-style:none;
+            padding:12px 16px;
+            align-items:center;
+        }
+        
+        .menu-nav .menu-item a{
+            text-decoration:none;
+            color:#333;
+            font-weight:600;
+            padding:8px 10px;
+            border-radius:6px;
+        }
+        
+        .menu-nav .menu-item a:hover{
+            background: rgba(43,122,238,0.08);
+            color: var(--accent);
+        }
 
         .book-container {
             max-width: 600px;
