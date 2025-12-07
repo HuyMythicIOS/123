@@ -115,3 +115,106 @@ body{
   .hero-img{ height:180px; }
   .book-list{ grid-template-columns:1fr; gap:12px; }
 }
+
+/* ==== FOOTER (thêm vào cuối back.css) ==== */
+.footer {
+    background: #0f172a;
+    color: #cbd5e1;
+    padding: 60px 20px;
+    margin-top: 40px;
+}
+
+.footer-container {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    gap: 40px;
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+    .footer-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.footer-brand .icon {
+    font-size: 28px;
+    color: #3b82f6;
+    margin-right: 10px;
+}
+
+.brand-name {
+    font-size: 22px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.footer-text {
+    font-size: 14px;
+    line-height: 1.6;
+    opacity: 0.85;
+}
+
+.footer-title {
+    font-size: 14px;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.footer-list {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-list li {
+    margin-bottom: 10px;
+}
+
+.footer-link,
+.footer-link-btn {
+    font-size: 14px;
+    color: #cbd5e1;
+    text-decoration: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: 0.25s ease;
+}
+
+.footer-link:hover,
+.footer-link-btn:hover {
+    color: #3b82f6;
+}
+
+.footer-social {
+    display: flex;
+    gap: 14px;
+}
+
+.social-btn {
+    width: 40px;
+    height: 40px;
+    background: rgba(255,255,255,0.08);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 16px;
+    transition: 0.25s ease;
+}
+
+.social-btn:hover {
+    background: #2563eb;
+}
