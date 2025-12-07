@@ -124,3 +124,152 @@ body{
 @media (max-width:600px){
   .featured-grid, .new-grid{ grid-template-columns:1fr; }
 }
+
+/* ==== FOOTER (Thêm/đã chỉnh sửa) ==== */
+/* Phần này có độ ưu tiên cao để tránh bị ghi đè bởi style khác */
+footer.footer,
+.footer {
+  background: #0f172a !important;    /* nền tối */
+  color: #cbd5e1 !important;         /* chữ sáng */
+  width: 100%;
+  box-sizing: border-box;
+  padding: 60px 20px !important;
+  margin-top: 40px !important;
+  display: block;
+  position: relative;
+  z-index: 5;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* Footer container layout */
+.footer .footer-container,
+.footer-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  gap: 40px;
+  grid-template-columns: 1fr;
+}
+
+/* Desktop: 3 cột */
+@media (min-width: 768px) {
+  .footer .footer-container,
+  .footer-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Brand */
+.footer .footer-brand,
+.footer-brand {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.footer .footer-brand .icon,
+.footer-brand .icon {
+  font-size: 28px;
+  color: #3b82f6;
+  margin-right: 10px;
+}
+.footer .brand-name,
+.brand-name {
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
+}
+
+/* Texts */
+.footer .footer-text,
+.footer-text {
+  font-size: 14px;
+  line-height: 1.6;
+  opacity: 0.95;
+  color: #cbd5e1;
+}
+
+/* Titles & lists */
+.footer .footer-title,
+.footer-title {
+  font-size: 14px;
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.footer .footer-list,
+.footer-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer .footer-list li,
+.footer-list li {
+  margin-bottom: 10px;
+}
+
+/* Links/buttons inside footer */
+.footer .footer-link,
+.footer .footer-link-btn,
+.footer-link,
+.footer-link-btn {
+  font-size: 14px;
+  color: #cbd5e1 !important;
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: 0.25s ease;
+}
+.footer .footer-link:hover,
+.footer .footer-link-btn:hover,
+.footer-link:hover,
+.footer-link-btn:hover {
+  color: #3b82f6 !important;
+}
+
+/* Social icons */
+.footer .footer-social,
+.footer-social {
+  display: flex;
+  gap: 14px;
+}
+
+.footer .social-btn,
+.social-btn {
+  width: 40px;
+  height: 40px;
+  background: rgba(255,255,255,0.08);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 16px;
+  transition: 0.25s ease;
+}
+.footer .social-btn:hover,
+.social-btn:hover {
+  background: #2563eb;
+}
+
+/* Buộc màu chữ cho mọi phần tử con trong footer để tránh ghi đè */
+.footer, .footer * {
+  color: inherit !important;
+}
+
+/* Nếu một phần tử cha đặt background trắng thì đảm bảo footer phủ kín */
+.footer {
+  background-image: none !important;
+}
+
+/* Tùy chỉnh nhỏ cho mobile: giảm padding */
+@media (max-width: 480px) {
+  .footer {
+    padding: 28px 16px !important;
+  }
+  .brand-name { font-size:18px; }
+}
